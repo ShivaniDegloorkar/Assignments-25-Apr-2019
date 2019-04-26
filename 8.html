@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<input type = "text" id = "str" placeholder="Enter Your String"><br>
+	<input type = "submit" onclick="nonrepeat();">
+	<h1 id = "displayResult" style="color: red;"></h1>
+
+	<script type="text/javascript">
+		function nonrepeat() 
+		{
+			var str = document.getElementById('str').value;
+			var flag;
+			console.log("Non repeating characters are:");
+			document.getElementById('displayResult').innerHTML += "Non repeating characters are: "; 
+			for (var i = 0; i < str.length; i++) 
+			{
+				temp = str[i];
+				flag = 0;
+				for (var j = 0; j < str.length; j++) 
+				{
+					if(i!=j && str[i]==str[j])
+					{
+						flag=1;
+						break;
+					}
+				}
+				if(flag==0)
+				{
+					document.getElementById('displayResult').innerHTML += str[i]+" , "; 
+					console.log(str[i]);
+				}
+			}
+		}
+</script>
+</body>
+</html>

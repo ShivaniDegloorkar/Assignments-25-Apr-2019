@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<input type = "text" id = "Guessednumber" placeholder="Enter Your Guess"><br>
+	<input type = "submit" onclick="CheckGuess();">
+	<h1 id = "displayResult" style="color: red;"></h1>
+	<script type = "text/javascript">
+		function CheckGuess() 
+		{
+			var guess = document.getElementById('Guessednumber').value;
+			var generatedNum = Math.floor(Math.random() * 11);
+			console.log("number is"+generatedNum);
+			if(guess == generatedNum)
+				document.getElementById('displayResult').innerHTML = "Right On !"
+			else
+				document.getElementById('displayResult').innerHTML = "Unlucky :("
 
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type = "text" id = "str" placeholder="Enter Your String"><br>
+	<input type = "submit" onclick="upper();">
+	<h1 id = "displayResult" style="color: red;"></h1>
+
+	<script type="text/javascript">
+		function upper() 
+		{
+			var str = document.getElementById('str').value;
+			var arr = str.split(' ');
+			console.log(arr);
+			
+			for (var i = 0; i < arr.length; i++) {
+				
+				arr[i]= arr[i].charAt(0).toUpperCase()+arr[i].substring(1);
+				
+			}
+			document.getElementById('displayResult').innerHTML = "Uppercase String: "+arr;
+			console.log(arr);
+		}
+
+  </script>
+</body>
+</html>

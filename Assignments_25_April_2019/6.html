@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type = "text" id = "str" placeholder="Enter Your data"><br>
+	<input type = "submit" onclick="dataType();">
+	<h1 id = "displayResult" style="color: red;"></h1>
+
+	<script type="text/javascript">
+		function dataType() 
+		{
+			var str = typeof document.getElementById('str').value;
+			document.getElementById('displayResult').innerHTML = "Type of argument is: "+(typeof document.getElementById('str').value) ;
+			
+			console.log(typeof document.getElementById('str').value);
+			
+		}
+	</script>
+</body>
+</html>

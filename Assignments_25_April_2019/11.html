@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<input type = "text" id = "str" placeholder="Enter Your String"><br>
+	<input type = "text" id = "word" placeholder="Enter word to be searched"><br>
+	<input type = "submit" onclick="occurence();">
+	<h1 id = "displayResult" style="color: red;"></h1>
+
+	<script type="text/javascript">
+		function occurence() 
+		{
+			var str = document.getElementById('str').value;
+			var strarr = str.split(" ");
+			var word = document.getElementById('word').value;
+			var count=0;
+			console.log("Number of occurences are:");
+			document.getElementById('displayResult').innerHTML += "Number of occurences of '"+word+"' are: "; 
+			for (var j = 0; j < strarr.length; j++) 
+			{
+				if(word==strarr[j])
+					count++;
+			}
+				
+					document.getElementById('displayResult').innerHTML += count; 
+					console.log(count);
+				
+			
+		}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<a id="myAnchor1" href="http://www.somePage1.com">Link to Some Page 1</a><br>
+	<a id="myAnchor2" href="http://www.somePage2.com">Link to Some Page 2</a><br>
+	<a id="myAnchor3" href="http://www.somePage3.com">Link to Some Page 3</a><br>
+	<a id="myAnchor4" href="http://www.somePage4.com">Link to Some Page 4</a>
+
+	<br><br>
+	<button onclick="getHref();">Check to display href Value of last link</button>
+	<br><br>
+	<p id="displayhref"></p>
+	<script type="text/javascript">
+		function getHref() 
+		{
+			var links = document.getElementsByTagName('a');
+			for (var i = 0; i < links.length; i++) 
+			{
+				console.log(links[i].href);
+			}
+			document.getElementById("displayhref").innerHTML = links[links.length - 1].href;
+		}
+	</script>
+</body>
+</html>

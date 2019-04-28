@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<label>Select a domain:</label><br>
+  	<select id="selectBox" size="4">
+  		<option>Full Stack</option>
+    	<option>SAP Basics</option>
+    	<option>Big Data</option>
+    	<option>Oracle</option>
+  	</select>
+
+	<br><br>
+
+<button onclick="removeOption()">Select domain to be removed</button>
+
+<script>
+	function removeOption() 
+	{
+  		var x = document.getElementById("selectBox");
+  		x.remove(x.selectedIndex);
+	}
+</script>
+
+</body>
+</html>

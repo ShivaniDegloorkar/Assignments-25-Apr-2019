@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<label>Select Course: </label>
+	<select id="change" >
+  		<option value="Full Stack">Full Stack</option>
+  		<option value="SAP Basics">SAP Basics</option>
+  		<option value="Big Data">Big Data</option>
+  		<option value="Oracle">Oracle</option>
+	</select>
+	<br><br>
+	<button onclick="enableDisable();">Enable or Disable on Click</button>
+
+	<script type="text/javascript">
+		function enableDisable() 
+		{
+			if(document.getElementById('change').disabled == true) 
+				document.getElementById('change').disabled = false;
+			else
+				document.getElementById('change').disabled = true;
+		}
+	</script>
+
+</body>
+</html>

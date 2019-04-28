@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<input type="number" id="numberOfboxes" placeholder="Enter number of boxes to be created">
+	<button onclick="createBoxes();">Submit</button>
+	<div id="insertBoxes">
+		
+	</div>
+
+	<script type="text/javascript">
+		function createBoxes() 
+		{
+			var numberOfboxes = document.getElementById('numberOfboxes').value;
+			for (var i = 0; i < numberOfboxes; i++) 
+			{
+				document.getElementById('insertBoxes').innerHTML += '<br><br> <input type="number" id="newboxes" placeholder="new box">';
+			}
+		}
+	</script>
+
+</body>
+</html>

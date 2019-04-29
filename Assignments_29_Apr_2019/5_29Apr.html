@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="div1" style="background-color: yellow; color: blue;">This is dummy division 1</div>
+	<div style="background-color: green; color: blue;">This is dummy division 2</div>
+	<div style="background-color: black; color: white;">This is dummy division 3</div>
+	<div style="background-color: red; color: yellow;">This is dummy division 4</div>
+	<br><br><button>Click to remove CSS from div 1</button>
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$("button").click(function() 
+			{
+				$("#div1").removeAttr('style');
+			});
+			
+		});
+	</script>
+</body>
+</html>

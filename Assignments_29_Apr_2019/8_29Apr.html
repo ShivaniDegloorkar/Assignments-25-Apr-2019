@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<span id="changeMe"></span><br><br>
+	<button>Add text to span above</button>
+	
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$("button").click(function() 
+			{
+				$('#changeMe').text('New text added using jquery');
+			});
+			
+		});
+	</script>
+</body>
+</html>

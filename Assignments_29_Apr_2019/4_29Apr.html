@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove all the options of a select box on a button click and then add one option and select it.</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<select id="selectBox">
+		<option>Nagpur</option>
+		<option>Pune</option>
+		<option>Mumbai</option>
+		<option>Bangalore</option>
+	</select>
+	<p><h3>Click here to remove all the options and add one.</h3></p>
+	<button>Click!</button>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('button').click(function() 
+			{
+				$('#selectBox option').remove();
+				$('#selectBox').html('<option selected="selected">Chennai</option>');
+
+			});
+		});
+	</script>
+</body>
+</html>

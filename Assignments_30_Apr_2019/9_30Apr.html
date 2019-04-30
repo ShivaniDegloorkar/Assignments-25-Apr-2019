@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get the value of first column in table</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<table id = "getvalue" border="1px solid black;">
+	<tr>
+		<td>UserName</td>
+		<td>Password</td>
+	</tr>
+	
+	<tr>
+		<td>Shivani</td>
+		<td>shiv123</td>
+	</tr>
+	
+	<tr>
+		<td>Degloorkar</td>
+		<td>Deg123</td>
+	</tr>
+</table>
+
+
+<script type="text/javascript">
+	$(document).ready(function() 
+	{
+		console.log($("td:first").text());
+		
+	});
+</script>	
+
+
+
+</table>
+</body>
+</html>

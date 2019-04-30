@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Move an element from one DIV to another
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="div1" style="background-color: pink; height: 100px;">
+		<button style="color: blue; padding: 20px; margin: 20px;">This button changes the division</button><br>
+
+	</div>
+	<br>
+	<div id="div2" style="background-color: yellow; height: 100px;">
+		
+	</div>
+	<br><br>
+	<button>Click To remove span from 1st division and add in other</button>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('button').click(function() 
+			{
+				var type = $("#div1").html();
+				console.log(type);
+				$("#div2").html(type);
+			});
+		});
+	</script>
+</body>
+</html>

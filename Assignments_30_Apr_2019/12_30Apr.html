@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change the text of input field to Title Case when user moves out of the text field</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<label>Enter the text :</label>
+	<input type="text" id="changeText">
+
+<script type="text/javascript">
+	$(document).ready(function() 
+	{
+		$("#changeText").mouseout(function() 
+		{
+		   var arr = $("#changeText").val().split(' ');
+		   console.log(arr[0].charAt(0).toUpperCase());
+
+		   for (var i = 0; i < arr.length; i++) 
+		   	$("#changeText").val($("#changeText").val().replace(arr[i], arr[i].charAt(0).toUpperCase()+arr[i].substring(1)));
+		});
+	});
+</script>	
+
+</body>
+</html>

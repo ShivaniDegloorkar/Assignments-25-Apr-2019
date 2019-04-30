@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Remove all spans from the html dom 
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div>
+		<span style="color: red">This is span 1</span><br>
+		<span style="color: blue">This is span 2</span><br>
+		<span style="color: yellow">This is span 3</span><br>
+		<span style="color: black">This is span 4</span><br>
+	</div>
+	<br><br>
+	<button>Click To remove above spans</button>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('button').click(function() 
+			{
+				$('span').remove();
+			});
+		});
+	</script>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delay the execution of subsequent items in the animation queue.</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		img
+		{
+			height: 200px;
+			width: 200px;
+			margin-left: 0px;
+			
+
+		}
+		div
+		{
+			padding-top: 30px;
+			display: block;
+		}
+	</style>
+	<h3> Click to delay the execution of items in animation queue.</h3>
+	
+	<img src="flower1.jpg" id="img1"><br>
+	
+	
+	<img src="flower2.jpg" id="img2"><br>
+	
+	
+	<img src="bud1.jpg" id="img3"><br>
+
+    
+	<button>Click!</button>
+	<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$("#img1").animate({marginLeft: '500px'}, 1000);
+			$("#img2").animate({marginLeft: '500px'}, 1000);
+			$("#img3").animate({marginLeft: '500px'}, 1000);
+			$("#img1").animate({marginLeft: '0px'}, 1000);
+			$("#img2").animate({marginLeft: '0px'}, 1000);
+			$("#img3").animate({marginLeft: '0px'}, 1000);
+
+			$('button').click(function() 
+			{
+			$("#img1").delay(4000).animate({marginLeft: '500px'}, 1000);
+			$("#img2").delay(4000).animate({marginLeft: '500px'}, 1000);
+			$("#img3").delay(4000).animate({marginLeft: '500px'}, 1000);
+			$("#img1").delay(4000).animate({marginLeft: '0px'}, 1000);
+			$("#img2").delay(4000).animate({marginLeft: '0px'}, 1000);
+			$("#img3").delay(4000).animate({marginLeft: '0px'}, 1000);
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Limit character input in the text area to 20 characters. Also the number of characters should get updated at the bottom while typing in the text.
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="text" id="checkLength" placeholder="Start Typing" style="height: 100px; width: 400px;">
+	<br><br>
+	<p id="count" style="color: red"></p>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#checkLength').on('keyup',function(event) 
+			{
+				var maxLength = 20;
+				var len = $('#checkLength').val().length;
+				var remain = maxLength - len;
+
+				if(len > 20 )
+				{
+					console.log("len>20: " + $('#checkLength').val().substring(0,20));
+ 					$('#checkLength').val($('#checkLength').val().substring(0,20));
+				}
+				else
+					$('#count').html("characters remaining :"+ remain);
+
+			});
+		});
+					
+	</script>
+</body>
+</html>
